@@ -19,15 +19,48 @@ public class Hipster
 	{
 		hipsterPhrases[0] = "That is so mainstream!";
 		hipsterPhrases[1] = "I don't mean to sound like a hipster, but, I love vintage stuff";
-		hipsterPhrases[2] = "";
+		hipsterPhrases[2] = "Insert a sarcastic phrase here";
 		hipsterPhrases[3] = "I was into that music before it was cool";
 	}
 	
 	private void setupArray()
+	{
+		
+	}
 	
 	public Hipster(String name)
+	{
+		
+	}
 	
 	public String getName()
+	{
+		
+	}
 	
+	public void setName(String name)
+	{
+		
+	}
+	
+	public String[] getHipsterPhrases()
+	{
+		
+	}
+	
+	public void setHipsterPhrases(String[] hipsterPhrases)
+	{
+		
+	}
+	
+	public Book[] getHipsterBooks()
+	{
+		
+	}
+	
+	public void setHipsterBooks(Book[] hipterBooks)
+	{
+		
+	}
 
 }

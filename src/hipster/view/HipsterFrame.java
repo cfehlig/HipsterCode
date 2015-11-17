@@ -9,10 +9,11 @@ public class HipsterFrame extends JFrame
 	private HipsterController baseController;
 	private HipsterPanel basePanel;
 	
-	public HipsteerFrame(HipsterController baseController)
-	this.baseController = baseController;
-	basePanel = new HipsterPanel(baseController);
-	setupFrame();
+	public HipsterFrame(HipsterController baseController)
+	{
+		this.baseController = baseController;
+		basePanel = new HipsterPanel(baseController);
+		setupFrame();
 	}
 	
 	public String Response(String prompt)
@@ -32,5 +33,6 @@ public class HipsterFrame extends JFrame
 	public HipsterController getBaseController()
 	{
 		return baseController;
+	}
 
 }

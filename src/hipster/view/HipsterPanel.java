@@ -55,7 +55,7 @@ public class HipsterPanel extends JPanel
 				String updatedTitle = phraseComboBox.getSelectedItem().toString();
 				baseController.getBaseFrame(),setTitle(updatedTitle);
 			}
-		});
+		}); 
 	}
 
 }

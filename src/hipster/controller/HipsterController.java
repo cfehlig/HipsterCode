@@ -10,7 +10,7 @@ public class HipsterController
 	public HipsterController
 	{
 		firstHipster = new Hipster();
-		baseFrame = new HipsteFrame(this);
+		baseFrame = new HipsterFrame(this);
 	
 	}
 
