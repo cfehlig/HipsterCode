@@ -1,7 +1,7 @@
 package hipster.view;
 
-import java.swing.JFrame;
-import hipster.Controller.hipsterController;
+import javax.swing.JFrame;
+import hipster.controller.HipsterController;
 import javax.swing.JOptionPane;
 
 public class HipsterFrame extends JFrame
@@ -16,7 +16,7 @@ public class HipsterFrame extends JFrame
 		setupFrame();
 	}
 	
-	public String Response(String prompt)
+	public String getResponse(String prompt)
 	{
 		String response = JOptionPane.showInputDialog(this, prompt);
 		return response;
