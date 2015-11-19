@@ -28,28 +28,18 @@ public class HipsterPanel extends JPanel
 		baseLayout = new SpringLayout();
 		bookPageCountLabel = new JLabel ("The page count");
 		bookAuthorLabel = new JLabel("The author");
-		baseLayout.putConstraint(SpringLayout.EAST, bookPageCountLabel, 0, SpringLayout.EAST, bookAuthorLabel);
-		baseLayout.putConstraint(SpringLayout.EAST, bookAuthorLabel, -22, SpringLayout.EAST, this);
 		bookPriceLabel = new JLabel("The price");
-		baseLayout.putConstraint(SpringLayout.NORTH, bookPriceLabel, 6, SpringLayout.SOUTH, bookPageCountLabel);
-		baseLayout.putConstraint(SpringLayout.EAST, bookPriceLabel, 0, SpringLayout.EAST, bookAuthorLabel);
 		bookSubjectLabel = new JLabel("The subject");
-		baseLayout.putConstraint(SpringLayout.NORTH, bookPageCountLabel, 6, SpringLayout.SOUTH, bookSubjectLabel);
-		baseLayout.putConstraint(SpringLayout.NORTH, bookSubjectLabel, 4, SpringLayout.SOUTH, bookAuthorLabel);
-		baseLayout.putConstraint(SpringLayout.EAST, bookSubjectLabel, 0, SpringLayout.EAST, bookAuthorLabel);
 		bookTitleLabel = new JLabel("The Title");
-		baseLayout.putConstraint(SpringLayout.NORTH, bookAuthorLabel, 6, SpringLayout.SOUTH, bookTitleLabel);
-		baseLayout.putConstraint(SpringLayout.SOUTH, bookTitleLabel, -135, SpringLayout.SOUTH, this);
-		baseLayout.putConstraint(SpringLayout.EAST, bookTitleLabel, -24, SpringLayout.EAST, this);
 		changeBookButton = new JButton("Change books");
-		baseLayout.putConstraint(SpringLayout.SOUTH, changeBookButton, -12, SpringLayout.NORTH, bookTitleLabel);
-		baseLayout.putConstraint(SpringLayout.EAST, changeBookButton, -10, SpringLayout.EAST, this);
+		maxClicks = baseController.getFirstHipster().getHipsterBooks().length;
+		startClick = 0;
+		
 		
 		
 		
 		phraseComboBox = new JComboBox<String>();
-		baseLayout.putConstraint(SpringLayout.NORTH, phraseComboBox, 10, SpringLayout.NORTH, this);
-		baseLayout.putConstraint(SpringLayout.WEST, phraseComboBox, 10, SpringLayout.WEST, this);
+		
 		
 		setupComboBox();
 		setupPanel();
@@ -80,7 +70,29 @@ public class HipsterPanel extends JPanel
 	
 	private void setupLayout()
 	{
+		baseLayout.putConstraint(SpringLayout.EAST, bookPageCountLabel, 0, SpringLayout.EAST, bookAuthorLabel);
+		baseLayout.putConstraint(SpringLayout.EAST, bookAuthorLabel, -22, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, bookPriceLabel, 6, SpringLayout.SOUTH, bookPageCountLabel);
+		baseLayout.putConstraint(SpringLayout.EAST, bookPriceLabel, 0, SpringLayout.EAST, bookAuthorLabel);
+		baseLayout.putConstraint(SpringLayout.NORTH, bookPageCountLabel, 6, SpringLayout.SOUTH, bookSubjectLabel);
+		baseLayout.putConstraint(SpringLayout.NORTH, bookSubjectLabel, 4, SpringLayout.SOUTH, bookAuthorLabel);
+		baseLayout.putConstraint(SpringLayout.EAST, bookSubjectLabel, 0, SpringLayout.EAST, bookAuthorLabel);
+		baseLayout.putConstraint(SpringLayout.NORTH, bookAuthorLabel, 6, SpringLayout.SOUTH, bookTitleLabel);
+		baseLayout.putConstraint(SpringLayout.SOUTH, bookTitleLabel, -135, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.EAST, bookTitleLabel, -24, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, changeBookButton, -12, SpringLayout.NORTH, bookTitleLabel);
+		baseLayout.putConstraint(SpringLayout.EAST, changeBookButton, -10, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, phraseComboBox, 10, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.WEST, phraseComboBox, 10, SpringLayout.WEST, this);
 		
+	}
+	
+	private void changeColor()
+	{
+		int red = (int) (Math.random()* 256);
+		int green = (int) (Math.random()* 256);
+		int blue = (int) (Math.random()* 256);
+		setBackground(new Color(red, green, blue));
 	}
 	
 	private void setupListeners()

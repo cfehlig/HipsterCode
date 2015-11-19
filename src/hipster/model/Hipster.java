@@ -16,13 +16,6 @@ public class Hipster
 		setupBooks();
 	}
 	
-	private void setupAray()
-	{
-		hipsterPhrases[0] = "That is so mainstream!";
-		hipsterPhrases[1] = "I don't mean to sound like a hipster, but, I love vintage stuff";
-		hipsterPhrases[2] = "Insert a sarcastic phrase here";
-		hipsterPhrases[3] = "I was into that music before it was cool";
-	}
 	
 	private void setupBooks()
 	{
@@ -49,7 +42,10 @@ public class Hipster
 	}
 	private void setupArray()
 	{
-		
+		hipsterPhrases[0] = "That is so mainstream!";
+		hipsterPhrases[1] = "I don't mean to sound like a hipster, but, I love vintage stuff";
+		hipsterPhrases[2] = "Insert a sarcastic phrase here";
+		hipsterPhrases[3] = "I was into that music before it was cool";
 	}
 	
 	public String[] getHipsterPhrases()
