@@ -3,7 +3,7 @@ package hipster.model;
 public class Hipster
 {
 	private String name;
-	private String [] hipsterPharses;
+	private String [] hipsterPhrases;
 	private Book [] hipsterBooks;
 	// private Book [] hipsterBooks;
 	
@@ -52,14 +52,14 @@ public class Hipster
 		
 	}
 	
-	public String[] getHipsterPharses()
+	public String[] getHipsterPhrases()
 	{
-		return hipsterPharses;
+		return hipsterPhrases;
 	}
 
-	public void setHipsterPharses(String[] hipsterPharses)
+	public void setHipsterPharses(String[] hipsterPhrases)
 	{
-		this.hipsterPharses = hipsterPharses;
+		this.hipsterPhrases = hipsterPhrases;
 	}
 
 	public String getName()
