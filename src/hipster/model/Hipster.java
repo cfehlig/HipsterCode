@@ -4,13 +4,14 @@ public class Hipster
 {
 	private String name;
 	private String [] hipsterPharses;
+	private Book [] hipsterBooks;
 	// private Book [] hipsterBooks;
 	
 	public Hipster()
 	{
 		this.name = "";
 		this.hipsterPhrases = new String[4];
-		// this.hipsterBooks = new Book[3];
+		this.hipsterBooks = new Book[3];
 		setupArray();
 		setupBooks();
 	}
@@ -23,44 +24,65 @@ public class Hipster
 		hipsterPhrases[3] = "I was into that music before it was cool";
 	}
 	
+	private void setupBooks()
+	{
+		Book firstBook, secondBook, thirdBook;
+		firstBook = new Book();
+		firstBook.setAuthor("J.K. Rowling");
+		firstBook.setTitle("Harry Potter and the Goblet of Fire");
+		firstBook.setSubject("Fantasy");
+		firstBook.setPageCount(636);
+		firstBook.setPrice(17.97);
+		
+		secondBook = new Book();
+		secondBook.setAuthor("Billy Bob");
+		secondBook.setTitle("Home");
+		secondBook.setSubject("Horror");
+		secondBook.setPageCount(378);
+		secondBook.setPrice(5.34);
+		
+		thirdBook = new Book(768,"Joe Johnson", "Learning Calculus", "Math", 150.32 );
+		
+		hipsterBooks[0] = firstBook;
+		hipsterBooks[1] = secondBook;
+		hipsterBooks[2] = thirdBook;
+	}
 	private void setupArray()
 	{
 		
 	}
 	
-	public Hipster(String name)
+	public String[] getHipsterPharses()
 	{
-		
+		return hipsterPharses;
 	}
-	
+
+	public void setHipsterPharses(String[] hipsterPharses)
+	{
+		this.hipsterPharses = hipsterPharses;
+	}
+
 	public String getName()
 	{
-		
+		return name;
 	}
-	
-	public void setName(String name)
-	{
-		
-	}
-	
-	public String[] getHipsterPhrases()
-	{
-		
-	}
-	
-	public void setHipsterPhrases(String[] hipsterPhrases)
-	{
-		
-	}
-	
+
 	public Book[] getHipsterBooks()
 	{
-		
+		return hipsterBooks;
 	}
-	
-	public void setHipsterBooks(Book[] hipterBooks)
+
+	public void setName(String name)
 	{
-		
+		this.name = name;
 	}
+
+	public void setHipsterBooks(Book[] hipsterBooks)
+	{
+		this.hipsterBooks = hipsterBooks;
+	}
+
+	
+	
 
 }
